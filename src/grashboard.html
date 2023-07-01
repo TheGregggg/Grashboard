@@ -33,7 +33,9 @@
 			}
 			input {
 				display: block;
-				margin: 4vw auto;
+				margin: 0 auto;
+				margin-top: 4.5vw;
+				margin-bottom: 7vw;
 				width: 100%;
 				border: 0;
 				font-size: 5vw;
@@ -44,12 +46,36 @@
 			}
 			input::placeholder {
 				color: #232133;
+				letter-spacing: 1.4vw;
 			}
 			input:focus {
 				border: 0;
 			}
 			input:focus-visible {
 				outline: 0;
+			}
+
+			.buttons {
+				width: 80%;
+				margin: 0 auto;
+				display: grid;
+				grid-template-columns: repeat(4, 1fr);
+				gap: 3vw;
+			}
+			.button {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 6vw;
+				font-size: 1.3vw;
+				font-weight: 500;
+				border-radius: 0.4vw;
+				transition: 0.15s background-color;
+			}
+
+			a {
+				display: grid;
+				text-decoration: none;
 			}
 		</style>
 	</head>
@@ -65,23 +91,45 @@
 		/>
 		<div class="buttons">
 			
-			<div class="button" style="background-color:#0067E6">
-				<a href="http://gregnas:5000/" style="color:#fff">
-					GregNAS
-				</a>
-			</div>
+			<a
+				href="http://gregnas:5000/"
+				class="button"
+				style="color:#fff;background-color:#0067E6FF"
+				onmouseover="style.backgroundColor = '#0067E6aa'"
+				onmouseleave="style.backgroundColor = '#0067E6FF'"
+			>
+				GregNAS
+			</a>
 			
-			<div class="button" style="background-color:#E50914">
-				<a href="http://gregflix/" style="color:#fff">
-					GregFlix
-				</a>
-			</div>
+			<a
+				href="http://gregflix/"
+				class="button"
+				style="color:#fff;background-color:#E50914FF"
+				onmouseover="style.backgroundColor = '#E50914aa'"
+				onmouseleave="style.backgroundColor = '#E50914FF'"
+			>
+				GregFlix
+			</a>
 			
-			<div class="button" style="background-color:#eb7d34">
-				<a href="https://10.69.0.1/" style="color:#fff">
-					GregRouter
-				</a>
-			</div>
+			<a
+				href="https://10.69.0.1/"
+				class="button"
+				style="color:#fff;background-color:#eb7d34FF"
+				onmouseover="style.backgroundColor = '#eb7d34aa'"
+				onmouseleave="style.backgroundColor = '#eb7d34FF'"
+			>
+				GregRouter
+			</a>
+			
+			<a
+				href="http://192.168.1.69:5006/"
+				class="button"
+				style="color:#fff;background-color:#874ad5FF"
+				onmouseover="style.backgroundColor = '#874ad5aa'"
+				onmouseleave="style.backgroundColor = '#874ad5FF'"
+			>
+				Actual
+			</a>
 			
 		</div>
 	</body>
