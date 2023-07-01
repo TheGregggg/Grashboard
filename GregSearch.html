@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Grashboard</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			body {
+				background-color: #191825;
+				font-family: Montserrat, Arial, sans-serif;
+				color: #865dff;
+			}
+			h1 {
+				letter-spacing: 0.5vw;
+				font-size: 3vw;
+				text-align: center;
+				margin-top: 0.5vw;
+			}
+			.subtitle {
+				position: absolute;
+				font-size: 3vw;
+				letter-spacing: 0.5vw;
+				top: -0.2vw;
+				left: 50%;
+				transform: rotateZ(-2deg) translateX(-50%);
+				color: #ffa3fd;
+				z-index: -1;
+				opacity: 0.2;
+			}
+			input {
+				display: block;
+				margin: 4vw auto;
+				width: 100%;
+				border: 0;
+				font-size: 5vw;
+				background-color: transparent;
+				text-align: center;
+
+				color: #e384ff;
+			}
+			input::placeholder {
+				color: #232133;
+			}
+			input:focus {
+				border: 0;
+			}
+			input:focus-visible {
+				outline: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Grashboard</h1>
+		<h2 class="subtitle">グレッグ</h2>
+		<input
+			type="text"
+			name="search"
+			id="search"
+			placeholder="search"
+			autofocus
+		/>
+		<div class="buttons"></div>
+	</body>
+	<script>
+		//creates a listener for when you press a key
+		window.onkeyup = keyup;
+
+		var inputText = document.getElementById;
+
+		function keyup(e) {
+			//setting your input text to the global Javascript Variable for every key press
+			inputText.value = e.target.value;
+
+			//listens for you to press the ENTER key, at which point your web address will change to the one you have input in the search box
+			if (e.keyCode == 13) {
+				window.location = "https://www.google.com/search?q=" + inputText.value;
+			}
+		}
+	</script>
+</html>
